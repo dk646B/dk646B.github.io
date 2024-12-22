@@ -20,19 +20,29 @@
             </div>
             <ul class="navbar__menu">
                 <li class="navbar__item">
-                    <a href="/" class="navbar__links">Home</a>
+                    <a href="index.html" class="navbar__links">
+                        home
+                    </a>
                 </li>
                 <li class="navbar__item">
-                    <a href="about.html" class="navbar__links">About</a>
+                    <a href="about.html" class="navbar__links">
+                        about
+                    </a>
                 </li>
                 <li class="navbar__item">
-                    <a href="portfolio.html" class="navbar__links">CS Portfolio</a>
+                    <a href="portfolio.html" class="navbar__links">
+                        CS PortFolio
+                    </a>
                 </li>
                 <li class="navbar__item">
-                    <a href="resume.html" class="navbar__links">Resume</a>
+                    <a href="resume.html" class="navbar__links">
+                       Resume
+                    </a>
                 </li>
                 <li class="navbar__btn">
-                    <a href="contact.html" class="button">Contact Me</a>
+                    <a href="contact.html" class="button">
+                        Contact Me
+                    </a>
                 </li>
             </ul>
         </div>
@@ -41,20 +51,54 @@
     <!-- Portfolio Content -->
     <div class="portfolio__container">
         <h1>My CS Portfolio</h1>
-        <p>Here are some projects I’ve worked on during my academic journey and personal exploration in computer science.</p>
-
+        <p>Here are some projects or just things I'm proud of that I’ve worked on during my academic journey and personal exploration in computer science.</p>
+    
         <div class="portfolio__projects">
             <div class="project__card">
-                <h2>Project 1</h2>
-                <p>Brief description of the project.</p>
-                <a href="#" class="button">View Project</a>
+                <div class="project__card-title">Portfolio Website</div>
+                <div class="project__card-description">Brief description of the project.Brief description of the project.Brief description of the project.</div>
+                <div class="project__card-expanded-description">Detailed description of the project. Detailed description of the project. Detailed description of the project.</div>
+            
+                <a href="#" class="project__card-button">View Project</a>
             </div>
             <div class="project__card">
-                <h2>Project 2</h2>
-                <p>Brief description of the project.</p>
-                <a href="#" class="button">View Project</a>
+                <div class="project__card-title">Book Website/Database</div>
+                <div class="project__card-description">Brief description of the project.</div>
+                <a href="#" class="project__card-button">View Project</a>
+            </div>
+            <div class="project__card">
+                <div class="project__card-title">Taskr App</div>
+                <div class="project__card-description">Brief description of the project.</div>
+                <a href="#" class="project__card-button">View Project</a>
+            </div>
+            <div class="project__card">
+                <div class="project__card-title">Computational Mathematics</div>
+                <div class="project__card-description">Brief description of the project.</div>
+
+                <a href="#" class="project__card-button">View Project</a>
+            </div>
+            <div class="project__card">
+                <div class="project__card-title">REU: Boise State University</div>
+                <div class="project__card-description">Brief description of the project.</div>
+
+                <a href="#" class="project__card-button">View Project</a>
             </div>
         </div>
     </div>
+<!-- JavaScript to handle the expand/collapse functionality for project__card -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const buttons = document.querySelectorAll('.project__card-button');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', function(event) {
+                event.preventDefault();
+                const card = this.closest('.project__card');
+                card.classList.toggle('expanded');
+            });
+        });
+    });
+    </script>
+    
 </body>
 </html>

@@ -403,3 +403,81 @@
     font-size: 1.2rem;
     color: #555;
 }
+/* portfolio styles here */
+.portfolio__projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(425px, 1fr));
+    gap: 1rem;
+}
+
+.project__card {
+    margin: 1rem;
+    height: 200px;
+    width: 400px;
+    border-radius: 4px;
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: height 0.3s ease;
+    overflow: hidden;
+}
+
+.project__card.expanded {
+    height: auto;
+}
+
+.project__card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+}
+
+.project__card-description {
+    /* font-size: 1rem; */
+    /* display: flex; */
+    color: black;
+}
+.project__card-expanded-description {
+    /* font-size: 1rem; */
+    /* display: flex; */
+    color: black;
+    display:none;
+}
+
+.project__card.expanded .project__card-description {
+    display: none;
+}
+
+.project__card.expanded .project__card-expanded-description {
+    display: block;
+}
+
+.project__card-button {
+    align-self: flex-end;
+    padding: 0.5rem 1rem;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+
+.project__card-button:hover {
+    background-color: #0056b3;
+}
+
+/* resume seciton */
+.responsive-pdf {
+    width: 100%;         /* Make the width 100% of its container */
+    height: 80vh;        /* Set the height to 80% of the viewport height */
+    max-width: 100%;     /* Ensure it never exceeds 100% of the container width */
+    max-height: 90vh;    /* Ensure it never exceeds 90% of the viewport height */
+    margin: 0 auto;      /* Center the PDF horizontally */
+    display: block;      /* Ensure it is treated as a block element */
+  }
+  
