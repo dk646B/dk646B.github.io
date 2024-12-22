@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
+    <title>Contact Me</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navbar (reuse from the main page) -->
+    <!-- Navbar -->
     <nav class="navbar">
         <div class="navbar__container">
             <div class="navbar__toggle" id="mobile-menu">
@@ -26,25 +26,33 @@
                     <a href="about.html" class="navbar__links">About</a>
                 </li>
                 <li class="navbar__item">
-                    <a href="/" class="navbar__links">CS Portfolio</a>
+                    <a href="portfolio.html" class="navbar__links">CS Portfolio</a>
                 </li>
                 <li class="navbar__item">
-                    <a href="/" class="navbar__links">Resume</a>
+                    <a href="resume.html" class="navbar__links">Resume</a>
                 </li>
                 <li class="navbar__btn">
-                    <a href="/" class="button">Contact Me</a>
+                    <a href="contact.html" class="button">Contact Me</a>
                 </li>
             </ul>
         </div>
     </nav>
 
-    <!-- About Page Content -->
-    <div class="about__container">
-        <h1>About Me</h1>
-        <p>Hi, I'm Danny Kim! I'm a 3rd-year Computer Science student with a Math minor at Occidental College...</p>
-        <!-- Add more details about your skills, interests, hobbies, etc. -->
-    </div>
+    <!-- Contact Form -->
+    <div class="contact__container">
+        <h1>Contact Me</h1>
+        <form action="https://formspree.io/f/{your-form-id}" method="POST">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
 
-    <script src="app.js"></script>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="_replyto" placeholder="Your Email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+    </div>
 </body>
 </html>
