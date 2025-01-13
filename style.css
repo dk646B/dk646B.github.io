@@ -4,6 +4,11 @@
     padding: 0 ;
     font-size: "Kumbh Sans", sans-serif;
 }
+body {
+    background-color: #F4E3C1;
+}
+
+
 .navbar{
     display: flex;
     justify-content: center;
@@ -18,14 +23,15 @@
 .navbar__container{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     height: 80px;   
     z-index: 1;
     width: 100%;   
     /* max-width: 1300px; */
-    magrin: 0 auto;
+    /* magrin: 0 auto; */
     padding: 0 50px;
     background-color: #f5f5f5;
-    background-image: linear-gradient(315deg, #f5f5f5 0%, #751d1d 74%);
+    background-image: linear-gradient(315deg, #70b2e7 0%, #004985 100%);
 }
 .navbar__menu{
     display: flex;
@@ -52,7 +58,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0rem 1rem;
+    
+    background-color: #0056b3;
+    border-radius: 10px;
 }
 
 .button{
@@ -60,18 +68,17 @@
     justify-content: center;
     text-decoration: none;
     align-items: center;
-    /* padding: 10px 20px; */
+    padding: 10px 20px;
     height:100%;
     width: 100%;
     border:none;
     outline: #000;
-    
-    background: #751d1d;
     color: #fff;
 }
 .button:hover{
     background: #4837ff;
     transition: all 0.3s ease'
+   
 
 }
 .navbar__links:hover{
@@ -167,7 +174,7 @@
 
 /* hero sectiojn css */
 .main{
-    background: #141414;
+    background: #F4E3C1;
 }
 .main__container {
     display: grid;
@@ -176,7 +183,7 @@
     justify-self: center;
     margin: 0 auto;
     height: 90vh;
-    background-color: #141414;
+    background-color: #F4E3C1;
     z-index: 1;
     width: 100%;
     max-width: 1300px;
@@ -185,7 +192,7 @@
 
 .main__content h1 {
     background-color: #7a4d4d;
-    background-image: linear-gradient(315deg, #ec5151 0%, #833c5f 100%);
+    background-image: linear-gradient(315deg, #70b2e7 0%, #004985 100%);
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -195,7 +202,7 @@
 
 .main__content h2 {
     background-color: #7a4d4d;
-    background-image: linear-gradient(315deg, #28a5df 0%, #833c5f 100%);
+    background-image: linear-gradient(315deg, #70b2e7 0%, #004985 100%);
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -207,12 +214,13 @@
     margin-top: 1rem;
     font-size: 2rem;
     font-weight: 700;
-    color: #fff;
+    color: #2d4057;
 }
 
 .main__btn{
     font-size: 1rem;
     background-image: linear-gradient(315deg, #28a5df 0%, #833c5f 100%);
+    color: #2d4057;
     padding: 14px 32px;
     border: none;
     border-radius: 4px;
@@ -313,7 +321,7 @@
 
 /* services section css */
 .services{
-    background: #141414;
+    background: #F4E3C1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -365,7 +373,7 @@
 
 .services h2{
     position: absolute;
-    top: 350px;
+    top: 400px;
     left: 30px;
 }
 
@@ -392,6 +400,14 @@
 .about__container {
     padding: 50px;
     text-align: center;
+    background-color: #F4E3C1;
+}
+
+#main__img {
+    max-width: 100%;
+    max-height: 500px; /* Adjust this value as needed */
+    width: auto;
+    height: auto;
 }
 
 .about__container h1 {
@@ -404,6 +420,10 @@
     color: #555;
 }
 /* portfolio styles here */
+
+.portfolio__container{
+    background-color: #F4E3C1;
+}
 .portfolio__projects {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(425px, 1fr));
@@ -414,8 +434,14 @@
     margin: 1rem;
     height: auto;
     width: auto;
+    min-width: 300px; /* Set your desired minimum width */
+    min-height: 200px; /* Set your desired minimum height */
     border-radius: 4px;
     background-color: gray;
+    border:2px solid #000000;
+    /* background-image: url('images/bsuLogo.png'); */
+    background-size: cover;
+    background-position: center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -423,17 +449,30 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: height 0.3s ease;
     overflow: hidden;
+    position: relative;
+    padding-top: 3rem;
 }
 
-.project__card.expanded {
+/* .project__card  expanded {
     height: flex;
     width: flex;
-}
+    background-color: #000;
+    background-size: cover;
+    background-position: center;
+} */
 
 .project__card-title {
     font-size: 1.5rem;
     font-weight: bold;
     color: black;
+    background-color: white; /* White background */
+    border: 1px solid black; /* Black border */
+    padding: 5px; /* Optional: Add some padding for better appearance */
+    position: absolute; /* Make the title position absolute */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    right: 0; /* Align to the right */
+    text-align: center; /* Center the text horizontally */
 }
 
 .project__card-description {
@@ -445,6 +484,7 @@
     /* font-size: 1rem; */
     /* display: flex; */
     color: black;
+   
     display:none;
 }
 
@@ -458,7 +498,9 @@
 
 
 .project__card-button {
-    align-self: flex-end;
+    position: absolute; /* Make the button position absolute */
+    bottom: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
     padding: 0.5rem 1rem;
     background-color: #007BFF;
     color: white;
@@ -483,3 +525,11 @@
     display: block;      /* Ensure it is treated as a block element */
   }
   
+
+/* contact section */
+
+#logo{
+    vertical-align: middle; 
+    width: 30px;
+    height: 30px;
+}
