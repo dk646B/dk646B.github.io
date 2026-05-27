@@ -3,41 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume</title>
+    <meta name="description" content="Danny Kim's resume — CS graduate available for software engineering, cybersecurity, and PM roles.">
+    <title>Resume — Danny Kim</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="navbar__container">
-            <h2 style="color: white;">Danny</h2>
-            <div class="navbar__toggle" id="mobile-menu">
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="container navbar__container">
+            <a href="index.html" class="navbar__logo">Danny<span>.</span></a>
+            <div class="navbar__toggle" id="mobile-menu" aria-label="Toggle menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </div>
-            <ul class="navbar__menu">
-                <li class="navbar__item"><a href="index.html" class="navbar__links">Home</a></li>
-                <li class="navbar__item"><a href="about.html" class="navbar__links">About</a></li>
-                <li class="navbar__item"><a href="portfolio.html" class="navbar__links">Portfolio</a></li>
-                <li class="navbar__item"><a href="resume.html" class="navbar__links">Resume</a></li>
-                <li class="navbar__btn"><a href="contact.html" class="button">Contact Me</a></li>
+            <ul class="navbar__menu" id="navbar-menu">
+                <li><a href="index.html" class="navbar__links">Home</a></li>
+                <li><a href="about.html" class="navbar__links">About</a></li>
+                <li><a href="portfolio.html" class="navbar__links">Portfolio</a></li>
+                <li><a href="resume.html" class="navbar__links active">Resume</a></li>
+                <li class="navbar__btn"><a href="contact.html" class="btn btn-primary">Contact Me</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Resume Content -->
-    <div class="resume__container">
-        <h1>Resume</h1>
-        
+    <!-- MAIN -->
+    <main>
+        <section class="section">
+            <div class="container">
 
-        <div class="resume__details">
-            <embed src="images/danny Resume school.pdf" type="application/pdf" class="responsive-pdf">
+                <div class="page-hero">
+                    <h1>Resume</h1>
+                    <p>CS graduate open to roles in software engineering, cybersecurity, and project management.</p>
+                </div>
 
-             </div>
-    </div>
+                <div class="resume-actions">
+                    <a href="pdf/CS Resume.pdf" download class="btn btn-primary">⬇ Download PDF</a>
+                    <a href="pdf/CS Resume.pdf" target="_blank" class="btn btn-outline">Open in New Tab</a>
+                </div>
+
+                <div class="resume-embed-wrap">
+                    <embed
+                        src="pdf/CS Resume.pdf"
+                        type="application/pdf"
+                        title="Danny Kim Resume"
+                    >
+                    <!-- Mobile fallback -->
+                    <div class="resume-mobile-note">
+                        <p>PDF preview isn't supported on this device.</p>
+                        <a href="pdf/CS Resume.pdf" download class="btn btn-primary">⬇ Download Resume</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Danny Kim &mdash; <a href="https://github.com/dk646B" target="_blank">GitHub</a> &middot; <a href="https://www.linkedin.com/in/danny-kim-05b76b276/" target="_blank">LinkedIn</a></p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
 </body>
 </html>

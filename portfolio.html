@@ -3,112 +3,268 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CS Portfolio</title>
+    <meta name="description" content="Danny Kim's project portfolio — web apps, mobile apps, and research.">
+    <title>Portfolio — Danny Kim</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="navbar__container">
-            <h2 style="color: white;">Danny</h2>
-            <div class="navbar__toggle" id="mobile-menu">
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="container navbar__container">
+            <a href="index.html" class="navbar__logo">Danny<span>.</span></a>
+            <div class="navbar__toggle" id="mobile-menu" aria-label="Toggle menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </div>
-            <ul class="navbar__menu">
-                <li class="navbar__item"><a href="index.html" class="navbar__links">Home</a></li>
-                <li class="navbar__item"><a href="about.html" class="navbar__links">About</a></li>
-                <li class="navbar__item"><a href="portfolio.html" class="navbar__links">Portfolio</a></li>
-                <li class="navbar__item"><a href="resume.html" class="navbar__links">Resume</a></li>
-                <li class="navbar__btn"><a href="contact.html" class="button">Contact Me</a></li>
+            <ul class="navbar__menu" id="navbar-menu">
+                <li><a href="index.html" class="navbar__links">Home</a></li>
+                <li><a href="about.html" class="navbar__links">About</a></li>
+                <li><a href="portfolio.html" class="navbar__links active">Portfolio</a></li>
+                <li class="navbar__btn"><a href="resume_contact.html" class="btn btn-primary">Resume & Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Portfolio Content -->
-    <div class="portfolio__container">
-        <h1>My CS Portfolio</h1>
-        <p>Here are some projects or just things I'm proud of that I’ve worked on during my academic journey and personal exploration in computer science.</p>
-    
-        <div class="portfolio__projects">
-            <div class="project__card" originalPic = "url('images/website pic.png') "style = " background-image: url('images/website pic.png'); background-size: contain; background-repeat: no-repeat; background-position: center;">
-                <div class="project__card-title">Portfolio Website</div>
-                <div class="project__card-expanded-description">I created this portfolio website during winter break as a way to explore something new and dive deeper into web development. My previous project sparked an interest in UI design, and I wanted to challenge myself to build something that was both functional and visually appealing using HTML, CSS, and JavaScript. Plus, I liked the idea of having a personal website… it makes me feel famous :).
+    <!-- MAIN -->
+    <main>
+        <section class="section">
+            <div class="container">
+
+                <div class="page-hero">
+                    <h1>My Portfolio</h1>
+                    <p>Projects I've built during school, research, and personal exploration. Click any card for details.</p>
                 </div>
-                
-                <div class="project__card-expanded-description">
-                    <a href="https://github.com/FlyingTurkeySandwitch/FlyingTurkeySandwitch.github.io" target="_blank">Github Link</a>
+
+                <!-- PROJECT CARDS GRID -->
+                <div class="portfolio__grid">
+
+                    <!-- Card 1: Portfolio Website -->
+                    <div class="project-card" data-modal="modal-website">
+                        <div class="project-card__thumb">
+                            <img src="images/website pic.png" alt="Portfolio Website screenshot">
+                        </div>
+                        <div class="project-card__body">
+                            <div class="project-card__title">Portfolio Website</div>
+                            <p class="project-card__desc">This personal portfolio site, built from scratch with HTML, CSS, and JavaScript.</p>
+                            <div class="project-card__tags">
+                                <span class="project-card__tag">HTML</span>
+                                <span class="project-card__tag">CSS</span>
+                                <span class="project-card__tag">JavaScript</span>
+                            </div>
+                        </div>
+                        <div class="project-card__footer">
+                            <span class="project-card__open">View details →</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Book Website/Database -->
+                    <div class="project-card" data-modal="modal-book">
+                        <div class="project-card__thumb">
+                            <img src="images/bookwebsite pic.png" alt="Book Website screenshot">
+                        </div>
+                        <div class="project-card__body">
+                            <div class="project-card__title">Book Website / Database</div>
+                            <p class="project-card__desc">A research tool for a psychology professor, featuring a MySQL backend and a React + Node.js frontend.</p>
+                            <div class="project-card__tags">
+                                <span class="project-card__tag">React</span>
+                                <span class="project-card__tag">Node.js</span>
+                                <span class="project-card__tag">MySQL</span>
+                            </div>
+                        </div>
+                        <div class="project-card__footer">
+                            <span class="project-card__open">View details →</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Taskr App -->
+                    <div class="project-card" data-modal="modal-taskr">
+                        <div class="project-card__thumb">
+                            <img src="images/taskr logo.png" alt="Taskr App logo" style="object-fit: contain; padding: 1.5rem; background: #eef2ff;">
+                        </div>
+                        <div class="project-card__body">
+                            <div class="project-card__title">Taskr — Android App</div>
+                            <p class="project-card__desc">A TaskRabbit-style Android app connecting task-needers with task-doers, built with Firebase.</p>
+                            <div class="project-card__tags">
+                                <span class="project-card__tag">Android</span>
+                                <span class="project-card__tag">Firebase</span>
+                                <span class="project-card__tag">Java</span>
+                            </div>
+                        </div>
+                        <div class="project-card__footer">
+                            <span class="project-card__open">View details →</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: REU Research -->
+                    <div class="project-card" data-modal="modal-reu">
+                        <div class="project-card__thumb">
+                            <img src="images/bsuLogo.png" alt="Boise State University logo" style="object-fit: contain; padding: 1.5rem; background: #eef2ff;">
+                        </div>
+                        <div class="project-card__body">
+                            <div class="project-card__title">REU — Boise State University</div>
+                            <p class="project-card__desc">Research on adversarial attacks against AI-based malware detectors, presented at ICUR 2024.</p>
+                            <div class="project-card__tags">
+                                <span class="project-card__tag">Cybersecurity</span>
+                                <span class="project-card__tag">ML</span>
+                                <span class="project-card__tag">Research</span>
+                            </div>
+                        </div>
+                        <div class="project-card__footer">
+                            <span class="project-card__open">View details →</span>
+                        </div>
+                    </div>
+
                 </div>
-                <div class="project__card-expanded-description"></div>
-            
-                <a href="#" class="project__card-button">View Project</a>
             </div>
-            <div class="project__card" originalPic = "url('images/bookwebsite pic.png')" style = " background-image: url('images/bookwebsite pic.png'); ">
-                <div class="project__card-title">Book Website/Database</div>
-                <div class="project__card-expanded-description">In my CS Practicum class, I worked in a team of 3 to develop a website for a professor in the psychology department to assist with their research. The project involved creating a backend database using MySQL to efficiently store and manage research data, while the front end was built with React and Node.js to ensure a responsive and user-friendly interface. It was a great experience working as a team, combining our skills to deliver a functional tool that supports meaningful academic research.
-                </div>
-                <div class = "project__card-expanded-description">
-                    <a href="https://github.com/BiggestZ/ZMD_SWE_Geffen" target="_blank">Github Link</a>
-                </div>
-                <div class="project__card-expanded-description">
-                    <a href="pdf/Practicuum - Final Presentation.pdf" download="presentation.pdf" target="_blank">Download Presentation</a>
-                </div>
-                
-                <a href="#" class="project__card-button">View Project</a>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Danny Kim &mdash; <a href="https://github.com/dk646B" target="_blank">GitHub</a> &middot; <a href="https://www.linkedin.com/in/danny-kim-05b76b276/" target="_blank">LinkedIn</a></p>
+        </div>
+    </footer>
+
+    <!-- ===================== MODALS ===================== -->
+
+    <!-- Modal: Portfolio Website -->
+    <div class="modal-overlay" id="modal-website" role="dialog" aria-modal="true" aria-labelledby="modal-website-title">
+        <div class="modal">
+            <div class="modal__header">
+                <h2 class="modal__title" id="modal-website-title">Portfolio Website</h2>
+                <button class="modal__close" aria-label="Close">&times;</button>
             </div>
-            <div class="project__card" originalPic = "url('images/taskr logo.png')" style = " background-image: url('images/taskr logo.png'); background-size: contain; background-repeat: no-repeat; background-position: center;" >
-                <div class="project__card-title">Taskr App</div>
-                <div class="project__card-expanded-description">In my Mobile Apps class, I collaborated with two classmates to develop an Android app called Taskr. The app is functionally similar to TaskRabbit, connecting users who need help with tasks to those willing to complete them. We used Firebase for the backend database, ensuring real-time updates and reliable data storage, and developed the app in Android Studio. The project was a great opportunity to learn about mobile app development while creating a practical solution for everyday needs.</div>
-                <div class = "project__card-expanded-description">
-                    <a href="https://github.com/FlyingTurkeySandwitch/Taskr" target="_blank">Github Link</a>
-                </div>
-                <div class="project__card-expanded-description">
-                    <a href="pdf/App Prototype Presentation.pdf" download="presentation.pdf" target="_blank">Download Presentation</a>
-                </div>
-                <a href="#" class="project__card-button">View Project</a>
+            <div class="modal__img">
+                <img src="images/website pic.png" alt="Portfolio Website screenshot">
             </div>
-            
-            <div class="project__card" originalPic = "url('images/bsuLogo.png')"style = " background-image: url('images/bsuLogo.png')" >
-                <div class="project__card-title">REU: Boise State University</div>
-                <div class="project__card-expanded-description">Over the summer, I had the incredible opportunity to participate in the Cloud Computing and Privacy REU at Boise State University. My research focused on exploring different types of adversarial attacks against intelligent malware detectors, analyzing how these systems can be manipulated and how they might be improved to better withstand such attacks. The program concluded with my attendance at the Idaho Conference on Undergraduate Research (ICUR), where I presented our findings and engaged with other undergraduate researchers from diverse fields.</div>
-                <div class = "project__card-expanded-description">
-                    Here is a picture of me presenting at the Idaho Conference on Undergraduate Research!
-                    <img src="images/REUPicture.jpg" alt="pic" id="main__img">
+            <div class="modal__body">
+                <div class="modal__tags">
+                    <span class="project-card__tag">HTML</span>
+                    <span class="project-card__tag">CSS</span>
+                    <span class="project-card__tag">JavaScript</span>
                 </div>
-                <div class="project__card-expanded-description">
-                    <a href="https://scholarworks.boisestate.edu/icur/2024/poster_session/79/" target="_blank">Conference Link</a>
-                </div>
-                
-                <a href="#" class="project__card-button">View Project</a>
+                <p>
+                    I built this portfolio website over winter break as a way to explore web development and practice UI design.
+                    My goal was to create something both functional and visually clean using vanilla HTML, CSS, and JavaScript —
+                    no frameworks, just fundamentals.
+                </p>
+                <p>
+                    The site features a responsive navbar with a mobile hamburger menu, a hero section, a project portfolio
+                    with modal popups, a resume embed, and a contact page. It's hosted on GitHub Pages.
+                </p>
+            </div>
+            <div class="modal__links">
+                <a href="https://github.com/dk646B/FlyingTurkeySandwitch.github.io" target="_blank" class="btn btn-primary">GitHub</a>
             </div>
         </div>
     </div>
-<!-- JavaScript to handle the expand/collapse functionality for project__card -->
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const buttons = document.querySelectorAll('.project__card-button');
 
-        buttons.forEach(button => {
-            button.addEventListener('click', function(event) {
-                event.preventDefault();
-                const card = this.closest('.project__card');
-                card.classList.toggle('expanded');
-                if (card.classList.contains('expanded')) {
-                    card.style.backgroundColor = "#F4E3C1";
-                    card.style.backgroundImage = "none";
-                } else {
-                card.style.backgroundColor = ""; // Reset to default or initial background color
-                card.style.backgroundImage = card.getAttribute('originalPic');; // Restore the original background image
-            }
+    <!-- Modal: Book Website -->
+    <div class="modal-overlay" id="modal-book" role="dialog" aria-modal="true" aria-labelledby="modal-book-title">
+        <div class="modal">
+            <div class="modal__header">
+                <h2 class="modal__title" id="modal-book-title">Book Website / Database</h2>
+                <button class="modal__close" aria-label="Close">&times;</button>
+            </div>
+            <div class="modal__img">
+                <img src="images/bookwebsite pic.png" alt="Book Website screenshot">
+            </div>
+            <div class="modal__body">
+                <div class="modal__tags">
+                    <span class="project-card__tag">React</span>
+                    <span class="project-card__tag">Node.js</span>
+                    <span class="project-card__tag">MySQL</span>
+                    <span class="project-card__tag">Team Project</span>
+                </div>
+                <p>
+                    In my CS Practicum class, I worked in a team of 3 to develop a web application for a psychology professor
+                    to support their research. The project involved designing and building a MySQL database to store and manage
+                    research data, with a React + Node.js frontend for a responsive, user-friendly interface.
+                </p>
+                <p>
+                    It was a great experience collaborating as a team and delivering a functional tool for real academic use.
+                    The project concluded with a final presentation to the department.
+                </p>
+            </div>
+            <div class="modal__links">
+                <a href="https://github.com/BiggestZ/ZMD_SWE_Geffen" target="_blank" class="btn btn-primary">GitHub</a>
+                <a href="pdf/Practicuum - Final Presentation.pdf" target="_blank" class="btn btn-outline">Download Presentation</a>
+            </div>
+        </div>
+    </div>
 
-            });
-        });
-    });
-    </script>
-    
+    <!-- Modal: Taskr -->
+    <div class="modal-overlay" id="modal-taskr" role="dialog" aria-modal="true" aria-labelledby="modal-taskr-title">
+        <div class="modal">
+            <div class="modal__header">
+                <h2 class="modal__title" id="modal-taskr-title">Taskr — Android App</h2>
+                <button class="modal__close" aria-label="Close">&times;</button>
+            </div>
+            <div class="modal__img" style="background: #eef2ff; display: flex; align-items: center; justify-content: center; height: 160px;">
+                <img src="images/taskr logo.png" alt="Taskr logo" style="object-fit: contain; max-height: 120px; width: auto;">
+            </div>
+            <div class="modal__body">
+                <div class="modal__tags">
+                    <span class="project-card__tag">Android Studio</span>
+                    <span class="project-card__tag">Firebase</span>
+                    <span class="project-card__tag">Java</span>
+                    <span class="project-card__tag">Team Project</span>
+                </div>
+                <p>
+                    In my Mobile Apps class, I collaborated with two classmates to build Taskr — an Android app functionally
+                    similar to TaskRabbit. The app connects users who need help with everyday tasks to people willing to complete them.
+                </p>
+                <p>
+                    We used Firebase as the backend for real-time data updates and reliable storage, and developed the app in
+                    Android Studio. The project was a great introduction to mobile development and real-time database design.
+                </p>
+            </div>
+            <div class="modal__links">
+                <a href="https://github.com/dk646B/Taskr" target="_blank" class="btn btn-primary">GitHub</a>
+                <a href="pdf/App Prototype Presentation.pdf" target="_blank" class="btn btn-outline">Download Presentation</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: REU -->
+    <div class="modal-overlay" id="modal-reu" role="dialog" aria-modal="true" aria-labelledby="modal-reu-title">
+        <div class="modal">
+            <div class="modal__header">
+                <h2 class="modal__title" id="modal-reu-title">REU — Boise State University</h2>
+                <button class="modal__close" aria-label="Close">&times;</button>
+            </div>
+            <div class="modal__img">
+                <img src="images/REUPicture.jpg" alt="Danny presenting at ICUR 2024">
+            </div>
+            <div class="modal__body">
+                <div class="modal__tags">
+                    <span class="project-card__tag">Cybersecurity</span>
+                    <span class="project-card__tag">Machine Learning</span>
+                    <span class="project-card__tag">Research</span>
+                    <span class="project-card__tag">Python</span>
+                </div>
+                <p>
+                    Over the summer, I participated in the Cloud Computing and Privacy REU at Boise State University. My research
+                    focused on adversarial attacks against intelligent malware detectors — specifically, how these AI systems can be
+                    manipulated and how they might be improved to withstand such attacks.
+                </p>
+                <p>
+                    The program concluded with a presentation at the Idaho Conference on Undergraduate Research (ICUR 2024), where
+                    I shared our findings with undergraduate researchers from across the country. The photo above is from that presentation!
+                </p>
+            </div>
+            <div class="modal__links">
+                <a href="https://scholarworks.boisestate.edu/icur/2024/poster_session/79/" target="_blank" class="btn btn-primary">Conference Page</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
 </body>
 </html>

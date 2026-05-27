@@ -3,57 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
+    <meta name="description" content="About Danny Kim — CS graduate, problem-solver, and aspiring software engineer.">
+    <title>About — Danny Kim</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="navbar__container">
-            <h2 style="color: white;">Danny</h2>
-            <div class="navbar__toggle" id="mobile-menu">
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="container navbar__container">
+            <a href="index.html" class="navbar__logo">Danny<span>.</span></a>
+            <div class="navbar__toggle" id="mobile-menu" aria-label="Toggle menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </div>
-            <ul class="navbar__menu">
-                <li class="navbar__item"><a href="index.html" class="navbar__links">Home</a></li>
-                <li class="navbar__item"><a href="about.html" class="navbar__links">About</a></li>
-                <li class="navbar__item"><a href="portfolio.html" class="navbar__links">Portfolio</a></li>
-                <li class="navbar__item"><a href="resume.html" class="navbar__links">Resume</a></li>
-                <li class="navbar__btn"><a href="contact.html" class="button">Contact Me</a></li>
+            <ul class="navbar__menu" id="navbar-menu">
+                <li><a href="index.html" class="navbar__links">Home</a></li>
+                <li><a href="about.html" class="navbar__links active">About</a></li>
+                <li><a href="portfolio.html" class="navbar__links">Portfolio</a></li>
+                <li class="navbar__btn"><a href="resume_contact.html" class="btn btn-primary">Resume & Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- About Page Content -->
-    <div class="about__container">
-        <h1>About Me</h1>
-        <div class="main__img--container">
-            <img src="images/chickenPicture.jpg" alt="pic" id="main__img">
+    <!-- MAIN CONTENT -->
+    <main>
+        <section class="section">
+            <div class="container">
+
+                <!-- Page header -->
+                <div class="page-hero">
+                    <h1>About Me</h1>
+                    <p>A little bit about who I am, where I came from, and what I'm up to.</p>
+                </div>
+
+                <!-- Bio + Photo -->
+                <div class="about__grid">
+                    <div>
+                        <img
+                            src="images/graduation_photo.jpeg"
+                            alt="Danny Kim"
+                            class="about__photo"
+                        >
+                    </div>
+                    <div class="about__text">
+                        <h2>Hey, I'm Danny 👋</h2>
+                        <p>
+                            I'm a Computer Science graduate from Occidental College, where I also minored in Mathematics.
+                            My interest in tech started in a pretty unexpected way: after my mom accidentally cut the charger
+                            for our family laptop, I found myself tinkering with wires just to get back to playing League of
+                            Legends. That curiosity about how things work stuck with me and grew into a genuine passion for
+                            building software.
+                        </p>
+                        <p>
+                            At Occidental, I got to explore a wide range of CS topics — algorithms, data structures, software
+                            development, and mobile apps — while my math minor sharpened the analytical side of my thinking.
+                            Outside of coursework, I participated in a Research Experience for Undergraduates (REU) at
+                            Boise State University, where I researched adversarial attacks on AI-based malware detectors and
+                            presented my findings at the Idaho Conference on Undergraduate Research.
+                        </p>
+                        <p>
+                            I'm interested in roles across software engineering, cybersecurity, and project management —
+                            basically anywhere I can keep building and problem-solving. When I'm not at a computer, you'll
+                            find me at the gym, hiking, or swimming. (Skydiving is next on the list.)
+                        </p>
+                        <div style="margin-top: 1.5rem;">
+                            <a href="resume_contact.html" class="btn btn-primary" style="margin-right: 0.75rem;">View Resume</a>
+                            <a href="resume_contact.html" class="btn btn-outline">Get In Touch</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills Section -->
+                <div class="skills-section">
+                    <h2 class="section-title">Skills &amp; Technologies</h2>
+                    <p class="section-subtitle">Languages, frameworks, and tools I've worked with.</p>
+                    <div class="skills__grid">
+                        <span class="skill-tag">🐍 Python</span>
+                        <span class="skill-tag">☕ Java</span>
+                        <span class="skill-tag">🌐 JavaScript</span>
+                        <span class="skill-tag">⚛️ React</span>
+                        <span class="skill-tag">🟢 Node.js</span>
+                        <span class="skill-tag">🗄️ MySQL</span>
+                        <span class="skill-tag">🔥 Firebase</span>
+                        <span class="skill-tag">🤖 Android Studio</span>
+                        <span class="skill-tag">🎨 HTML &amp; CSS</span>
+                        <span class="skill-tag">🐙 Git &amp; GitHub</span>
+                        <span class="skill-tag">🔒 Cybersecurity</span>
+                        <span class="skill-tag">📊 Data Structures</span>
+                        <span class="skill-tag">🧮 Algorithms</span>
+                        <span class="skill-tag">🧠 Machine Learning</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Danny Kim &mdash; <a href="https://github.com/dk646B" target="_blank">GitHub</a> &middot; <a href="https://www.linkedin.com/in/danny-kim-05b76b276/" target="_blank">LinkedIn</a></p>
         </div>
-        <p>
-            I’m Danny Kim, a 3rd-year Computer Science student at Occidental College with a minor in Mathematics. My journey into tech began in an unexpected way: after my mom accidentally cut the charger for our family laptop, I found myself tinkering with wires in a desperate attempt to play League of Legends. That initial fascination with fixing things, driven by my love for gaming, grew into a passion for repairing electronics.
-        </p>
-        <p>
-            At Occidental, I’ve explored a wide range of computer science topics, including algorithms, data structures, and software development. My math minor has enhanced my analytical and problem-solving skills, providing me with a strong foundation for tackling technical challenges.
-        </p>
-        <p>
-            Beyond academics, I’m an avid gym-goer who loves hiking and swimming; and I might even try skydiving soon to complete the trifecta of earth, water, and air! I’m always up for an adventure and enjoy anything that gets me moving or outdoors.
-        </p>
-    </div>
+    </footer>
 
-    <script>
-        const mobileMenu = document.getElementById('mobile-menu');
-        const navbarMenu = document.querySelector('.navbar__menu');
-
-        mobileMenu.addEventListener('click', () => {
-            navbarMenu.classList.toggle('active');
-        });
-    </script>
+    <script src="app.js"></script>
 </body>
 </html>

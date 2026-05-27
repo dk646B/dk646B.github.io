@@ -26,7 +26,6 @@
                 <li><a href="about.html" class="navbar__links">About</a></li>
                 <li><a href="portfolio.html" class="navbar__links">Portfolio</a></li>
                 <li><a href="resume.html" class="navbar__links">Resume</a></li>
-                <li><a href="resume_contact.html" class="navbar__links">resume/contact</a></li>
                 <li class="navbar__btn"><a href="contact.html" class="btn btn-primary active">Contact Me</a></li>
             </ul>
         </div>
@@ -57,6 +56,11 @@
                             </a>
                         </div>
 
+                        
+                    </div>
+
+                    <!-- Right: sidebar card -->
+                    <div class="contact__sidebar">
                         <div class="contact__direct">
                             <a href="https://github.com/dk646B" target="_blank" class="contact__link-item">
                                 <div class="contact__link-icon">
@@ -86,34 +90,46 @@
                                 </div>
                             </a>
                         </div>
+                    
                     </div>
 
-                    <!-- Right: sidebar card -->
-                    <div class="contact__sidebar">
-                        <h3>Currently looking for</h3>
-                        <p>
-                            I'm a recent CS graduate interested in roles across software engineering, cybersecurity,
-                            and project management. I'm open to full-time positions, internships, and interesting side projects.
-                        </p>
-                        <div style="display: flex; flex-direction: column; gap: 0.5rem;">
-                            <span class="skill-tag" style="width: fit-content;">💻 Software Engineering</span>
-                            <span class="skill-tag" style="width: fit-content;">🔒 Cybersecurity</span>
-                            <span class="skill-tag" style="width: fit-content;">📋 Project Management</span>
+                
+                    
+
+                
+            </div>
+            <div class="page-hero">
+                        <h2>Resume</h2>
+                        <p>CS graduate interested in software engineering, cybersecurity, and project management.</p>
+                    </div>
+
+                    <div class="resume-actions">
+                        <a href="pdf/CS Resume.pdf" download class="btn btn-primary">⬇ Download PDF</a>
+                        <a href="pdf/CS Resume.pdf" target="_blank" class="btn btn-outline">Open in New Tab</a>
+                    </div>
+
+                    <div class="resume-embed-wrap">
+                        <embed
+                            src="pdf/CS Resume.pdf"
+                            type="application/pdf"
+                            title="Danny Kim Resume"
+                        >
+                        <!-- Mobile fallback -->
+                        <div class="resume-mobile-note">
+                            <p>PDF preview isn't supported on this device.</p>
+                            <a href="pdf/CS Resume.pdf" download class="btn btn-primary">⬇ Download Resume</a>
                         </div>
-                        <hr class="divider" style="margin: 1.5rem 0;">
-                        <a href="resume.html" class="btn btn-outline" style="width: 100%; justify-content: center;">View Resume</a>
                     </div>
 
                 </div>
-            </div>
         </section>
     </main>
 
     <!-- FOOTER -->
     <footer class="footer">
-        <div class="container">
+        <!-- <div class="container">
             <p>&copy; 2024 Danny Kim &mdash; <a href="https://github.com/dk646B" target="_blank">GitHub</a> &middot; <a href="https://www.linkedin.com/in/danny-kim-05b76b276/" target="_blank">LinkedIn</a></p>
-        </div>
+        </div> -->
     </footer>
 
     <script src="app.js"></script>
