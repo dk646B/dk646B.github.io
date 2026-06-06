@@ -138,6 +138,26 @@
                         </div>
                     </div>
 
+                     <!-- Card 6: foodulator -->
+                    <div class="project-card" data-modal="modal-foodulator">
+                        <div class="project-card__thumb">
+                            <img src="images/foodulator.png" alt="FOODULATOR logo" style="object-fit: contain; padding: 1.5rem; background: #eef2ff;">
+                        </div>
+                        <div class="project-card__body">
+                            <div class="project-card__title">FOODULATOR — Database Class Project</div>
+                            <p class="project-card__desc">The final project for my databases class.</p>
+                            <div class="project-card__tags">
+                                <span class="project-card__tag">Database</span>
+                                <span class="project-card__tag">Web Development</span>
+                                <span class="project-card__tag">LLM </span>
+                                <span class="project-card__tag">Python</span>
+                            </div>
+                        </div>
+                        <div class="project-card__footer">
+                            <span class="project-card__open">View details →</span>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -301,19 +321,59 @@
                     <span class="project-card__tag">Python</span>
                 </div>
                 <p>
-                    Over the summer, I participated in the Cloud Computing and Privacy REU at Boise State University. My research
-                    focused on adversarial attacks against intelligent malware detectors — specifically, how these AI systems can be
-                    manipulated and how they might be improved to withstand such attacks.
+                    For my senior thesis at Occidental College, I explored how explainability techniques can reveal 
+                    vulnerabilities in machine learning-based malware detectors. Using SHAP (SHapley Additive 
+                    exPlanations), I analyzed how functionality-preserving perturbations, specifically section 
+                    injection and padding, shift feature attributions in the EMBER LightGBM malware classifier. 
+                    By comparing SHAP values before and after adversarial modifications, I identified which PE 
+                    structural features drive malicious classification and demonstrated that even simple, low-cost 
+                    perturbations can meaningfully increase evasion rates against commercial antivirus engines.
                 </p>
                 <p>
-                    The program concluded with a presentation at the Idaho Conference on Undergraduate Research (ICUR 2024), where
-                    I shared our findings with undergraduate researchers from across the country. The photo above is from that presentation!
-                </p>
+                    The project culminated in a presentation at Occidental's comprehensive senior project symposium,
+                    where I shared my findings with faculty and peers.
             </div>
             <div class="modal__links">
                 <a href="https://github.com/dk646B/emberDetector" target="_blank" class="btn btn-primary">Github</a>
                 <a href="pdf/comps poster.pdf" target="_blank" class="btn btn-outline">View Poster</a>
                 <a href="pdf/comps_Paper.pdf" target="_blank" class="btn btn-outline">View Paper</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-foodulator" role="dialog" aria-modal="true" aria-labelledby="modal-foodulator-title">
+        <div class="modal">
+            <div class="modal__header">
+                <h2 class="modal__title" id="modal-foodulator-title">FOODULATOR — database Project</h2>
+                <button class="modal__close" aria-label="Close">&times;</button>
+            </div>
+            <div class="modal__img">
+                <img src="images/foodulator.png" alt="FOODULATOR logo">
+            </div>
+            <div class="modal__body">
+                <div class="modal__tags">
+                    <span class="project-card__tag">Database</span>
+                    <span class="project-card__tag">Web Development</span>
+                    <span class="project-card__tag">LLM </span>
+                    <span class="project-card__tag">Python</span>
+                </div>
+                <p>
+                    For my databases course at Occidental College, I built Foodulator — a recipe recommender 
+                    system designed to reduce food waste. The idea came from a recurring problem I noticed while 
+                    cooking: ingredients go bad before you get a chance to use them. You enter the ingredients you 
+                    have on hand, set a tolerance for how many missing ingredients you're willing to work around, 
+                    and Foodulator queries a normalized SQLite database to surface matching recipes. The backend 
+                    is structured in 3NF with a many-to-many recipe-ingredient relationship, and the GUI was built 
+                    with PySide6. I also wrote a data cleaning pipeline using an LLM API to process raw recipe 
+                    data from a 2M+ recipe Kaggle dataset.
+                </p>
+                <p>
+                    This was my first project where I designed the databse and my first time utilizing LLM API!
+            </div>
+            <div class="modal__links">
+                <a href="https://github.com/dk646B/Foodulator" target="_blank" class="btn btn-primary">Github</a>
+                <a href="pdf/Foodulator Report.pdf" target="_blank" class="btn btn-outline">View Report</a>
+                <a href="pdf/Foodulator.pdf" target="_blank" class="btn btn-outline">View Presentation</a>
             </div>
         </div>
     </div>
